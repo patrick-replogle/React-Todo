@@ -14,7 +14,7 @@ class App extends React.Component {
   toggleCompleted = itemId => {
     console.log("toggleCompleted ", itemId);
     this.setState({
-      todos: this.todos.map(item => {
+      todos: this.state.todos.map(item => {
         if (item.id === itemId) {
           return { ...item, completed: !item.completed };
         }
@@ -41,7 +41,7 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div>
+      <div className="App">
         <h2>Welcome to your Todo App!</h2>
         <TodoList
           todos={this.state.todos}
