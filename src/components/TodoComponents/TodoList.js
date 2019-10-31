@@ -3,21 +3,22 @@ import Search from "./Search.js";
 import Todo from "./Todo";
 
 const TodoList = props => {
-  console.log(props);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [filteredTodos, setFilteredTodos] = useState([]);
 
-  useEffect(() => {
-    const results = props.todos.filter(todo =>
-      todo.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setSearchResults(results);
-  }, [searchTerm]);
+  // useEffect(() => {}, [filteredTodos, searchTerm]);
 
-  const handleChange = event => {
-    setSearchTerm(event.target.value);
-    console.log(searchTerm);
-  };
+  // const handleChange = event => {
+  //   setSearchTerm(event.target.value);
+  //   setFilteredTodos(
+  //     props.todos.filter(todo =>
+  //       todo.name.toLowerCase().includes(searchTerm.toLowerCase())
+  //     )
+  //   );
+  //   console.log(searchTerm);
+  // };
+
+  // const myArray = filteredTodos.length ? filteredTodos : props.todos;
 
   return (
     <div className="todo-list">
