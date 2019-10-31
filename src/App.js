@@ -1,7 +1,6 @@
 import React from "react";
 import TodoForm from "./components/TodoComponents/TodoForm.js";
 import TodoList from "./components/TodoComponents/TodoList.js";
-import logo from "./img/todo.jpg";
 import "./components/TodoComponents/Todo.css";
 
 class App extends React.Component {
@@ -46,11 +45,6 @@ class App extends React.Component {
       })
     });
   };
-
-  componentDidMount() {
-    const todo = window.localStorage.getItem("todo") === "true";
-    this.setState({ todo });
-  }
 
   render() {
     return (

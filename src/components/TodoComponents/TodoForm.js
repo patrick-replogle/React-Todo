@@ -20,7 +20,6 @@ class TodoForm extends React.Component {
     if (this.state.todoName !== "") {
       this.props.addTodo(this.state.todoName);
     }
-    window.localStorage.setItem("todo", this.state.todoName);
     this.setState({
       todoName: ""
     });
