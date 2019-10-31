@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 class TodoForm extends React.Component {
   constructor() {
@@ -19,6 +20,7 @@ class TodoForm extends React.Component {
     if (this.state.todoName !== "") {
       this.props.addTodo(this.state.todoName);
     }
+    window.localStorage.setItem("todo", this.state.todoName);
     this.setState({
       todoName: ""
     });
@@ -34,7 +36,6 @@ class TodoForm extends React.Component {
             value={this.state.todoName}
           />
           <button>Add Todo</button>
-          <button>Clear Completed</button>
         </form>
       </div>
     );

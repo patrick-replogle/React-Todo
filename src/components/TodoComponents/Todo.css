@@ -8,7 +8,10 @@ body {
 }
 
 body {
-  background-color: #2d2d37;
+  background: url("../../img/todo.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 h1,
@@ -20,19 +23,22 @@ h6,
 div,
 p,
 span {
-  color: white;
+  color: black;
   font-family: "Roboto", sans-serif;
 }
 
 .App {
   font-family: sans-serif;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 210px;
 }
 
 .todo-list {
@@ -40,11 +46,27 @@ span {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .todo {
-  width: 20%;
+  background-color: #ffffe0;
+  color: white;
+  border-radius: 3px;
+  width: 300px;
+  text-align: left;
   margin: 5px 5px;
+  padding-left: 8px;
+  cursor: pointer;
+  border: 1px solid black;
+  font-weight: 900;
+}
+
+.todo.completed {
+  background-color: #fafad2;
+  color: black;
+  font-weight: bold;
+  text-decoration: line-through;
 }
 
 input {
@@ -58,16 +80,20 @@ input:focus {
   outline: none;
 }
 
-.todo {
-  background-color: #e64944;
-  width: 45%;
-  text-align: left;
-  margin: 4px 0;
-  padding-left: 8px;
-  cursor: pointer;
+button {
+  background: #ffff00;
+  color: black;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 6px;
+  border: 1px solid black;
 }
 
-.todo.completed {
-  background-color: #d17d7c;
-  text-decoration: line-through;
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background: white;
+  color: #003f34;
 }

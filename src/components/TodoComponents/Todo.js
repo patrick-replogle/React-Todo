@@ -1,15 +1,5 @@
 import React from "react";
 
-// const Item = props => {
-//   let verboseClassName = "item";
-//   if (props.item.purchased) {
-//     verboseClassName = verboseClassName + " purchased";
-//   }
-
-//   const handleClick = () => {
-//     props.togglePurchased(props.item.id);
-//   };
-
 const Todo = props => {
   let toggleClass = "todo";
   if (props.todo.completed) {
