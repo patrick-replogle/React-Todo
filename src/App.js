@@ -25,6 +25,7 @@ class App extends React.Component {
 
   addTodo = todoName => {
     console.log("add todo: ", todoName);
+    localStorage.setItem("todo", this.state.todos);
     this.setState({
       todos: [
         ...this.state.todos,
@@ -46,7 +47,14 @@ class App extends React.Component {
     });
   };
 
+  componentDidMount() {
+    const savedData = localStorage.getItem("todo");
+    this.setState({ savedData });
+  }
+
   render() {
+    console.log("todo", localStorage.getItem("todo"));
+
     return (
       <div className="App">
         <div className="form-container">
